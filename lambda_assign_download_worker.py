@@ -69,6 +69,8 @@ def lambda_handler(event, context):
     job_id = str(uuid.uuid4())
 
     today = datetime.utcnow().strftime("%Y-%m-%d")
+    # custom date
+    custom_date = "2026-09-01"
     NIFTY_5  = NIFTY_50[:5]  # For testing, limit to first 5 symbols
 
     for symbol in NIFTY_5:
@@ -77,7 +79,7 @@ def lambda_handler(event, context):
             "job_id": job_id,
             "symbol": symbol,
             "exchange": "NSE",
-            "date": today,
+            "date": custom_date,
             "task": "download_daily_data"
         }
 

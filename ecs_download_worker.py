@@ -6,7 +6,7 @@ from download_data import download_and_upload_stock_data
 sqs = boto3.client("sqs")
 
 #QUEUE_URL = os.environ["QUEUE_URL"]
-QUEUE_URL = "https://sqs.us-east-1.amazonaws.com/504827858021/download_data_queue"
+QUEUE_URL = "https://sqs.ap-south-1.amazonaws.com/504827858021/download-stock-data-queue"
 
 
 while True:

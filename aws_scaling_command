@@ -1,0 +1,6 @@
+aws application-autoscaling put-scaling-policy --policy-name sqs-backlog-target-tracking-scaling-policy \
+  --service-namespace ecs --scalable-dimension ecs:service:DesiredCount --resource-id service/default/download-stock-data-repo-783b \
+  --policy-type TargetTrackingScaling --target-tracking-scaling-policy-configuration file://config.json
+
+  target tracking scaling policy
+  https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking-metric-math.html#metric-math-sqs-queue-backlog

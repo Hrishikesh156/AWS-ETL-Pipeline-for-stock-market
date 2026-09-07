@@ -10,7 +10,7 @@ BUCKET_NAME = "stock-data-bucket-504827858021-ap-south-1-an"  # Replace with you
 
 def download_and_upload_stock_data(symbol: str, date: str):
 
-    ticker = f"{symbol}"
+    ticker = f"{symbol}.NS"
 
     start = pd.Timestamp(date)
     end = start + pd.Timedelta(days=1)
@@ -71,4 +71,4 @@ def download_and_upload_stock_data(symbol: str, date: str):
 
     return df
 
-res  = download_and_upload_stock_data("RELIANCE", "2026-09-01")
+#res  = download_and_upload_stock_data("RELIANCE", "2026-09-01")
